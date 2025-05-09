@@ -43,7 +43,7 @@ class QAService:
             logger.info("Starting QA Service initialization")
             
             # Configure the Google Generative AI
-            genai.configure(api_key="AIzaSyASH5--Y0O-QeD8GsD6pCyPGAc3t5scATw")
+            genai.configure(api_key=os.environ.get("GOOGL_API_KEY"))
             
             # Load documents from the docs directory
             docs_dir = os.path.join(settings.BASE_DIR, "docs")
